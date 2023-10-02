@@ -29,6 +29,8 @@ print(a)
 mySet = {i for i in range(5)}
 print(mySet)
 print(type(mySet))
+print(min(mySet))
+print(max(mySet))
 
 # mySet2 = {}   #这样空初始化默认是dict
 # mySet2 = set()    #所以空set初始化这样干

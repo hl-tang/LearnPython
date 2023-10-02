@@ -46,3 +46,24 @@ a.sort()    # 字典序，大写字母排前面
 print(a)
 a.sort(key=str.lower)   #不管首字母大小写了
 print(a)
+
+# Return the lowest index in the string where substring sub is found
+print("PythonPy".find('Py'))
+# To check if sub is a substring or not, use the in operator
+print('Py' in 'Python')
+
+""" 更多参考官方文档
+https://docs.python.org/3/library/stdtypes.html """
+
+# replace 本质是替换字符，但也可以用来删除特定字符
+# str.replace(old, new[, count])
+s= "hello! welcome to china!!!."
+print(s.replace('!', ''))
+print(s.replace('!', '', 1))
+#记住，字符串是不可改变的。原有的字符串保持不变——replace() 返回一个新的字符串，不会修改原有的字符串。
+print(s) #原来的不变
+
+# 逆置字符串
+s = "abcdefg"
+print(s[::-1]) #利用slice切片，step为负时，start默认最大，stop默认最小
+print(s)

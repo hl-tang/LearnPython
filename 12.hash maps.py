@@ -13,6 +13,7 @@ print(myMap["Alice"])
 print(myMap.get('Alice'))   #dict的get()返回该键对应的值
 
 print("Alice" in myMap) # search in O(1) time
+# dict删除用pop，没有remove方法
 myMap.pop("Alice") # remove the key also remove the value
 print("Alice" in myMap)
 
