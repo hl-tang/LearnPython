@@ -21,3 +21,4 @@ print(queue)
 l1 = ['a', 'b', 'c']
 q1 = deque(l1)
 print(q1)
+print(len(q1))

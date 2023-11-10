@@ -18,6 +18,14 @@ print(s)
 s = "This is just a test string"
 print(s)
 
+# 判断字符串是否只包含数字 str.isdigit()
+print("123".isdigit())  # True
+print("Abc123".isdigit())
+
+# 判断字符串是否只包含字母 str.isalpha()
+print("Abc".isalpha())  # True
+print("Abc123".isalpha())
+
 # Valid numeric strings can be converted
 print("123" + "123")
 print(int("123") + int("123"))
@@ -66,4 +74,6 @@ print(s) #原来的不变
 # 逆置字符串
 s = "abcdefg"
 print(s[::-1]) #利用slice切片，step为负时，start默认最大，stop默认最小
+print(s)
+print(''.join(reversed(s))) #但这个慢，推荐用切片
 print(s)

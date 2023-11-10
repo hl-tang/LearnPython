@@ -26,6 +26,14 @@ for i in range(5,1,-1):     # for(int i=5;i>1;i--)
     print(i)
 
 
+# for循环range最初确定了后，即使循环中改了长度，i也会按照最初的range自增
+# 然后可能引发下标越界
+""" s = "aabbcc"
+for i in range(len(s)):
+    if s[i] == 'b': #IndexError: string index out of range
+        s = s.replace('b', '',1)
+print(s) """
+
 
 # 循环中不需要使用循环变量的值，可以使用下划线 _ 来代替循环变量名
 # N = int(input())

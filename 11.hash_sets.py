@@ -14,7 +14,7 @@ print(len(mySet))
 # search
 print(1 in mySet)
 print(2 in mySet)
-print(3 in mySet)
+print(3 not in mySet)
 
 mySet.remove(2) # remove also in constant time
 print(2 in mySet)
@@ -42,3 +42,11 @@ for i in range(1,6):
 print(mySet2)
 
 print(list(mySet2))
+
+print(mySet2[0]) #错误 set是不能带下标的 'set' object is not subscriptable
+
+# 清空
+mySet2.clear()
+print(mySet2)
+del mySet2
+# print(mySet2) #'mySet2' is not defined
