@@ -22,6 +22,9 @@ x.remove('b')   # remove()的参数是值
 print(x)
 del x[2]    # 按下标删除
 print(x)
+del x[:]; print(x)  # slices
+del x   # del可以直接删对象
+# print(x)    #NameError: name 'x' is not defined
 '''
 insert()  O(n)时间复杂度
 index[] 根据下标访问    O(1)时间复杂度

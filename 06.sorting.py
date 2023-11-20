@@ -51,7 +51,7 @@ def sort_by_age(student):
     return student.age """
 # 定义排序函数，按年龄从小到大排序，年龄相同时按成绩从大到小排序
 def sort_by_age_and_grade(student):
-    return (student.age, -student.grade)
+    return (student.age, -student.grade)    # return 元组
 
 # 使用普通函数作为key参数进行排序
 # 和C++的cmp函数返回值是bool不同，python就直接根据返回值的大小排

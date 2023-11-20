@@ -43,7 +43,10 @@ print("".join(strings)) # delimitor here is empty string
 print(" ".join(strings))
 print(", ".join(strings))
 
-# split 分割
+# split 分割 返回的是list
+print("  a     b    c   ".split()) #If sep is not specified or is None,就按连续空格作为分割符
+print("  a     b    c   ".split(' ')) #分割符不能是空串''
+print("  a     b    c   ".split('  ', 3)) #指定maxsplit,三刀四段
 s = "Both list.sort() and sorted() have a key parameter\
  to specify a function (or other callable) to be called\
   on each list element prior to making comparisons."

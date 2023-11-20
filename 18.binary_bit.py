@@ -33,6 +33,10 @@ print(shifted_string)  # 输出左移后的二进制字符串
 print(5 >> 1) #右移1位，除以2
 print(6 >> 1)
 
-
+# 位运算: &与 |或 ~非 ^异或
 print(0b110 | 0b101)
 print(6 | 5)
+
+print(5 & 6)
+print(5 ^ 6)
+print(~100)
