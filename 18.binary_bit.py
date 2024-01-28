@@ -35,6 +35,7 @@ print(6 >> 1)
 
 # 位运算: &与 |或 ~非 ^异或
 print(0b110 | 0b101)
+# print(bin(6) | bin(5)) #TypeError,两边要是数字，不能是字符串
 print(6 | 5)
 
 print(5 & 6)

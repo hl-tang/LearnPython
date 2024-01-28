@@ -40,6 +40,9 @@ print(myMap.keys())
 for key in myMap.keys():
     print(key, myMap[key])
 
+for i in range(len(myMap)):
+    print(list(myMap.keys())[i], list(myMap.values())[i])
+
 print(myMap.values())
 for val in myMap.values():
     print(val)
@@ -63,3 +66,42 @@ print(sorted(dic.items(), key=lambda x: (-x[1], x[0]))) #a在e前面
 print((sorted(dic.items(), key=lambda s: s[1], reverse=True))[0])
 
 print(max(dic, key=dic.get))    #max()返回的只是key
+
+
+from collections import defaultdict
+# defaultdict作用在于: 当key不存在却被查找时，返回一个默认值而不raise KeyError
+# 但原始的dict加上setdefault()方法也可以做到
+# 似乎defaultdict有些鸡肋，就用setdefault()吧，或者key not in分类讨论
+s = 'mississippi'   #统计文字列中各个字符的出现回数
+char_cnt = dict()   # char_cnt = {}と一緒
+for c in s:
+    # char_cnt[c] += 1 #KeyError
+    # char_cnt[c] = char_cnt.get(c, 0) + 1    # OK
+    if c not in char_cnt:
+        char_cnt[c] = 1
+    else:
+        char_cnt[c] += 1
+print(char_cnt)
+char_cnt.clear()
+for c in s:
+    char_cnt.setdefault(c, 0) #若不存在，就插入c: 0
+    # char_cnt.get(c, 0) #无效
+    char_cnt[c] += 1
+print(char_cnt)
+
+char_cnt_default = defaultdict(lambda: 100) #但默认值想设定非0的话，lambda函数
+for c in s:
+    char_cnt_default[c] += 1
+print(char_cnt_default)
+
+# setdefault()和get():
+# get方法设置的默认值不会改变原字典，而setdefault设置的默认值会插入字典若不存在的话
+dic1 = {"A": "a", "B": "b"}
+x = dic1.get("E", "e")
+print(x)
+print(dic1)
+dic2 = {"C": "c", "D": "d"}
+# dic2 = {"C": "c", "D": "d", "E": "f"}
+y = dic2.setdefault("E", 'e')
+print(y)
+print(dic2)

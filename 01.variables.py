@@ -1,6 +1,5 @@
-'''
-https://www.youtube.com/watch?v=0K_eZGS5NsU
-'''
+""" Python for Coding Interviews - Everything you need to Know
+https://www.youtube.com/watch?v=0K_eZGS5NsU """
 
 # Dynamic type variable 运行时才决定变量的type
 n=0

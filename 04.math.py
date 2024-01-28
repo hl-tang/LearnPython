@@ -39,3 +39,15 @@ Python numbers are infinite so they never overflow
 print(math.pow(2,200))  #约1.6e60，C++ int最大就2e10
 # But still less than infinity
 print(math.pow(2,200) < float("inf"))
+
+# 排列组合
+from scipy.special import perm, comb
+print(perm(6,3))
+print(comb(6,3))
+print(comb(64,32)%1000000000) #数字大了以后不精确了，正解应该942590534
+
+def my_comb(m: int, n: int) -> int:
+    # return math.factorial(m) / (math.factorial(n) * math.factorial(m-n))
+    return math.factorial(m) // (math.factorial(n) * math.factorial(m-n))
+# /除结果也是942590464, //除结果对了
+print(my_comb(64,32) % 1000000000)

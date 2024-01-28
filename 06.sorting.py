@@ -14,6 +14,7 @@ print(arr)
 # key要指定只有一个参数的函数，并且只有一个返回值用来排序
 arr.sort(key=lambda x: len(x))  #lambda表达式
 print(arr)  # sorts are stable
+# 快排是不稳定的，那py的sort到底是怎么做的呢
 
 
 student_tuples = [
