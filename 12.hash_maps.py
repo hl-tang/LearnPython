@@ -21,7 +21,8 @@ print(myMap.get("Charles", 0)) #0 或者设定的值
 print("Charles" in myMap)
 print("Alice" in myMap) # search in O(1) time
 # dict删除用pop，没有remove方法
-myMap.pop("Alice") # remove the key also remove the value
+myMap.pop("Alice") # remove the key also remove the value,而且会return val
+# del myMap["Alice"] # 也可以直接删不返回val
 print("Alice" in myMap)
 
 # Initialize

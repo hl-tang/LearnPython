@@ -16,8 +16,8 @@ JSONDecodeError: Expecting property name enclosed in double quotes
 所以里面的key-val都是双引号(当然key即属性,肯定都是"),最外面单引号表示JSON字符串 """
 
 '''
-JSON: null, True/False
-Python: None, true/false
+JSON: null, true/false
+Python: None, True/False
 '''
 
 # 1. Convert from Python(dict) to JSON(str)    json.dumps()

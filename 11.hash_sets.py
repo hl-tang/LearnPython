@@ -43,10 +43,18 @@ print(mySet2)
 
 print(list(mySet2))
 
-print(mySet2[0]) #错误 set是不能带下标的 'set' object is not subscriptable
+# print(mySet2[0]) #错误 set是不能带下标的 'set' object is not subscriptable
 
 # 清空
 mySet2.clear()
 print(mySet2)
 del mySet2
 # print(mySet2) #'mySet2' is not defined
+
+# 数学中的集合类计算
+x = {"apple", "banana", "cherry"}
+y = {"google", "microsoft", "apple"}
+print(x.difference(y))  #差
+print(y.difference(x))
+print(x.intersection(y))    #交
+print(x.union(y))   #并

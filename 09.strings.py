@@ -80,3 +80,19 @@ print(s[::-1]) #利用slice切片，step为负时，start默认最大，stop默�
 print(s)
 print(''.join(reversed(s))) #但这个慢，推荐用切片
 print(s)
+
+# 前后缀处理 prefix suffix
+# 判断字符串是否以特定前缀开始  str.startswith(prefix[, start=0[, end=len(str)]])
+s = "GeeksforGeeks"
+print(s.startswith("Geeks"))
+# 类似地，还有endswith用于判断后缀  str.endswith(suffix[, start[, end]])
+print(s.endswith("Geeks"))
+
+# str.removeprefix(prefix)
+# If the string starts with the prefix string, return string[len(prefix):]. Otherwise, return a copy of the original string
+print('TestHook'.removeprefix('Test'))
+print('TestHook'.removeprefix('Testh'))
+# str.removesuffix(suffix)
+# If the string ends with the suffix string and that suffix is not empty, return string[:-len(suffix)]. Otherwise, return a copy of the original string
+print('MiscTests'.removesuffix('Tests'))
+print('MiscTests'.removesuffix('Test'))
