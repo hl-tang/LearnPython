@@ -4,6 +4,7 @@ from datetime import datetime, date, timedelta
 
 s1 = "2021-04-01 08:30:00"
 dt1 = datetime.fromisoformat(s1)
+print(type(dt1))
 print(dt1.month, dt1.day, dt1.hour)
 print(dt1.date(), dt1.time())
 print(datetime.min < dt1) #用datetime.min代替None

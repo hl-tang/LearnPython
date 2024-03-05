@@ -6,7 +6,6 @@ print(myFunc(3,4))
 
 # 可以像c++一样，直接return，也能不return
 
-
 # 指定函数的返回值类型
 def add_numbers(a: float, b: float) -> float:
     sum = a + b
@@ -56,3 +55,7 @@ print(l4)
 l2.insert(1, 2) #l4不变，如果深拷贝就更不变了
 print(l2, l3, l4)
 print(id(l2), id(l3), id(l4))
+
+# lambda函数
+# https://www.youtube.com/watch?v=u3Hu2rTyXDg
+# 可以用在sort(), filter(), map()里面作为参数，简化代码量

@@ -97,3 +97,8 @@ print(nums)
 arr = [1,2,3,3,4,5]
 print(arr.index(3))
 print(arr.index(3,3))
+
+# list相加：合并
+l1 = [1, 2, 3]
+l2 = l1 + ['a', 'b']
+print(l2)
