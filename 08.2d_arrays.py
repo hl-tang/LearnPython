@@ -30,3 +30,7 @@ print(np_arr)
 # 三维数组
 np_arr = np.zeros((3,2,1), dtype=int)
 print(np_arr)
+
+# dp[3][2][2]
+dp = [[[float("inf"), float("inf")]  for j in range(2)] for i in range(3)] #由里朝外,3行2列
+print(dp[2]) #第一维度

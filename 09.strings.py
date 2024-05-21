@@ -60,6 +60,7 @@ print(a)
 
 # Return the lowest index in the string where substring sub is found
 print("PythonPy".find('Py'))
+print("PythonPy".find('Py', "PythonPy".find('Py') + 1)) #找第二次
 # To check if sub is a substring or not, use the in operator
 print('Py' in 'Python')
 
@@ -96,3 +97,13 @@ print('TestHook'.removeprefix('Testh'))
 # If the string ends with the suffix string and that suffix is not empty, return string[:-len(suffix)]. Otherwise, return a copy of the original string
 print('MiscTests'.removesuffix('Tests'))
 print('MiscTests'.removesuffix('Test'))
+
+# 全排列
+from itertools import permutations
+for perm in permutations("abc"):
+    print(perm)
+# 数字全排列，不算前导0
+for perm in permutations("301"):
+    if perm[0] != "0":
+        num = int(''.join(perm))
+        print(num)
