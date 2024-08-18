@@ -51,7 +51,7 @@ l2.remove(2); print(l3) #l2的改动也会影响到l3，实际l2 l3指向一个�
 # 那怎么做才能赋值但不指向同一个对象？ shallow copy和deep copy
 import copy
 l4 = copy.copy(l2) #虽是浅拷贝，但复制的值是可变对象,且每个元素就一层，这里work；如果有元素是list那需要深拷贝
-print(l4)
+print(f"l4: {l4}")
 l2.insert(1, 2) #l4不变，如果深拷贝就更不变了
 print(l2, l3, l4)
 print(id(l2), id(l3), id(l4))

@@ -101,4 +101,7 @@ print(arr.index(3,3))
 # list相加：合并
 l1 = [1, 2, 3]
 l2 = l1 + ['a', 'b']
+print(l1)
 print(l2)
+l1.extend([4, 5]) # extend在原数组上改(相当于append multiple objects)
+print(l1)

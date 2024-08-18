@@ -106,3 +106,11 @@ dic2 = {"C": "c", "D": "d"}
 y = dic2.setdefault("E", 'e')
 print(y)
 print(dic2)
+
+# 字典套字典, json的value又是个dict
+prefectureStore_sales = defaultdict(lambda: defaultdict(int))
+# prefectureStore_sales = {}
+prefectureStore_sales["東京都"] = {"日本橋店": 1400}
+prefectureStore_sales["東京都"]["品川店"] = 1000
+prefectureStore_sales["大阪府"]["日本橋店"] = 3600
+print(prefectureStore_sales)

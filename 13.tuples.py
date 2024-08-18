@@ -9,6 +9,7 @@ print(tup[-1])
 
 # Can be used as key for hash map/set
 myMap = {(1,2): 'a'}
+# print(myMap[[1,2]]) # TypeError: unhashable type: 'list'
 print(myMap[(1,2)])
 
 mySet = set()
