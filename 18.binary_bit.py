@@ -40,4 +40,8 @@ print(6 | 5)
 
 print(5 & 6)
 print(5 ^ 6)
+# XOR重要性质
+print("X ^ X = 0:", 5 ^ 5)
+print(f"X ^ 0 = X: {5 ^ 0}")
+
 print(~100)

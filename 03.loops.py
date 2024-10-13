@@ -35,6 +35,32 @@ for i in range(len(s)):
 print(s) """
 
 
+""" 
+虽然之前遇到好多次了用for遍历list, 循环体内改变了list的长度(通常是减小), 会导致数组越界
+还是有必要拿出来讲一下, Python的for in range写法其实和C++式的for(int i=0; i<len(a); i++)是不一样的
+for-in会把一开始定义好的iterator全部遍历到,不会去有i<len(a)的判断
+说到底是Python的for循环没有C++式的for(int i=0; i<len(a); i++), 只有for-in range式的
+"""
+a = [1, 2, 3, 4, 5]
+for i in range(len(a)): # !!! 即使len改了,一开始range(0,5)也不会重新生成了,i照样从0遍历到4 !!! 所以下面主动加个判断,才起到了for(int i=0; i<len(a); i++)等价的效果
+    if i >= len(a):
+        break
+    print("len: ", len(a))
+    print("i: ", i)
+    del a[i]
+    print(a)
+
+print("########")
+a = [1, 2, 3, 4, 5]
+i = 0
+while i<len(a):
+    print("len: ", len(a))
+    print("i: ", i)
+    del a[i]
+    print(a)
+    i += 1
+
+
 # 循环中不需要使用循环变量的值，可以使用下划线 _ 来代替循环变量名
 # N = int(input())
 

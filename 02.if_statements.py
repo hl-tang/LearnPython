@@ -26,3 +26,5 @@ m, n = 10, 20
 max_mn = m if m > n else n
 # max_mn = max(m, n)
 print(max_mn)
+
+print(not False)

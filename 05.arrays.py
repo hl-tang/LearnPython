@@ -12,6 +12,9 @@ print(arr)
 arr.pop()   # pop from the end
 print(arr)
 
+print(5 in arr) # 没想到list也可以像set一样判定元素是否存在
+print(4 in arr)
+
 # 当然stack只是操作受限的数组，list is technically an array
 # we can insert into the middle
 arr.insert(1,"7") # index, value

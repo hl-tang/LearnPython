@@ -30,3 +30,6 @@ disjoint_set.union(2, 4)
 disjoint_set.union(0, 4)
 print(disjoint_set.find(2))
 print(disjoint_set.find(5)) # 2, 5是队友了
+
+print(disjoint_set.parent)
+print(disjoint_set.rank)

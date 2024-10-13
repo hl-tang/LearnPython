@@ -11,7 +11,9 @@ queue.pop()
 print(queue) # 默认也是右边弹出，这样就是stack了
 
 # 队列用popleft()
-queue.popleft()
+# queue.popleft() # 不返回也是可以的
+cur_head = queue.popleft()
+print("弹出队的是: ", cur_head)
 print(queue)
 
 queue.appendleft(1) #双端队列deque两头都可以操作
